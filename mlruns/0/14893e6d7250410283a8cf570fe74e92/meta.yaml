@@ -1,0 +1,15 @@
+artifact_uri: file:///home/vicky/fitbit/mlruns/0/14893e6d7250410283a8cf570fe74e92/artifacts
+end_time: 1654405408881
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 14893e6d7250410283a8cf570fe74e92
+run_uuid: 14893e6d7250410283a8cf570fe74e92
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1654405406699
+status: 3
+tags: []
+user_id: vicky
