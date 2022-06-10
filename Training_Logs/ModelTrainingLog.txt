@@ -570,3 +570,29 @@
 2022-06-05/14:10:29		r2_score_of_full_model<max(r2_score_lst)
 2022-06-05/14:10:29		full_model rejected
 2022-06-05/14:10:29		Successful End of Training
+2022-06-10/11:33:56		Start of Training
+2022-06-10/11:33:56		Entered the get_data method of the Data_Getter class
+2022-06-10/11:33:56		Data Load Successful.Exited the get_data method of the Data_Getter class
+2022-06-10/11:33:56		Entered the is_null_present method of the Preprocessor class
+2022-06-10/11:33:56		Finding missing values is a success.Data written to the null values file. Exited the is_null_present method of the Preprocessor class
+2022-06-10/11:33:56		Entered the separate_label_feature method of the Preprocessor class
+2022-06-10/11:33:56		Label Separation Successful. Exited the separate_label_feature method of the Preprocessor class
+2022-06-10/11:33:56		Entered the save_model method of the File_Operation class
+2022-06-10/11:33:56		Model File StandardScaler saved. Exited the save_model method of the Model_Finder class
+2022-06-10/11:33:56		Entered the elbow_plot method of the KMeansClustering class
+2022-06-10/11:33:58		The optimum number of clusters is: 4 . Exited the elbow_plot method of the KMeansClustering class
+2022-06-10/11:33:58		Entered the create_clusters method of the KMeansClustering class
+2022-06-10/11:33:58		Entered the save_model method of the File_Operation class
+2022-06-10/11:33:58		Model File KMeans saved. Exited the save_model method of the Model_Finder class
+2022-06-10/11:33:58		succesfully created 4clusters. Exited the create_clusters method of the KMeansClustering class
+2022-06-10/11:33:58		Entered the get_best_model method of the Model_Finder class
+2022-06-10/11:33:58		Entered the get_best_params_for_random_forest method of the Model_Finder class
+2022-06-10/11:38:06		Random Forest best params: {'bootstrap': True, 'max_depth': 3, 'max_features': 'auto', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100}. Exited the get_best_params_for_random_forest method of the Model_Finder class
+2022-06-10/11:38:10		Entered the get_best_params_for_DecisionTreeRegressor method of the Model_Finder class
+2022-06-10/11:38:42		KNN best params: {'criterion': 'friedman_mse', 'max_depth': 4, 'max_features': 'sqrt', 'min_samples_split': 8, 'splitter': 'best'}. Exited the KNN method of the Model_Finder class
+2022-06-10/11:38:45		Entered the get_best_params_for_xgboost method of the Model_Finder class
+2022-06-10/11:39:01		XGBoost best params: {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100}. Exited the get_best_params_for_xgboost method of the Model_Finder class
+2022-06-10/11:39:03		Entered the save_model method of the File_Operation class
+2022-06-10/11:39:03		Model File XGBoost3 saved. Exited the save_model method of the Model_Finder class
+2022-06-10/11:39:03		Entered the get_best_model method of the Model_Finder class
+2022-06-10/11:39:03		Entered the get_best_params_for_random_forest method of the Model_Finder class

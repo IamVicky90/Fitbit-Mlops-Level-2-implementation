@@ -115,3 +115,6 @@
 2022-06-05/14:18:06		Connecting to s3 resource bucket_name fitbit-datastore-registry
 2022-06-05/14:18:08		Sucessfully get the file FitBit_15052019_1704.csv From s3 bucket name fitbit-datastore-registryto path Training_Batch_Files
 2022-06-05/14:18:09		Sucessfully get the file FitBit_15052019_170448.csv From s3 bucket name fitbit-datastore-registryto path Training_Batch_Files
+2022-06-10/11:33:43		Connecting to s3 resource bucket_name fitbit-datastore-registry
+2022-06-10/11:33:48		Sucessfully get the file FitBit_15052019_1704.csv From s3 bucket name fitbit-datastore-registryto path Training_Batch_Files
+2022-06-10/11:33:49		Sucessfully get the file FitBit_15052019_170448.csv From s3 bucket name fitbit-datastore-registryto path Training_Batch_Files
