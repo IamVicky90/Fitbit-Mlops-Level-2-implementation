@@ -15,7 +15,6 @@ contextlib2==21.6.0
 contextvars==2.4
 cycler==0.10.0
 databricks-cli==0.16.6
-dataclasses==0.8
 docker==5.0.3
 entrypoints==0.4
 fastapi==0.78.0

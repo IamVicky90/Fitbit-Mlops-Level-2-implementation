@@ -100,7 +100,8 @@ celerybeat.pid
 mlruns
 # SageMath parsed files
 *.sage.py
-Training_Logs
+Training_Logs/
+Training_Database/*
 .csv
 # Environments
 .env

@@ -3,7 +3,7 @@ from flask import Response
 from trainingModel import trainModel
 from training_Validation_Insertion import train_validation
 from  download_data_files.get_data_files_from_s3_bucket import Get_Data
-from utils.utils import read_config,copy_models_to_artifacts
+from utils.utils import read_config,copy_models_to_artifacts,create_important_directories_if_not_exist
 
 
 
@@ -11,6 +11,7 @@ from utils.utils import read_config,copy_models_to_artifacts
 def start_train():
 
     try:
+            create_important_directories_if_not_exist()
             config=read_config()
             path=config['trainig_configurations']['training_batch_files_path']
             get_data=Get_Data(path)
