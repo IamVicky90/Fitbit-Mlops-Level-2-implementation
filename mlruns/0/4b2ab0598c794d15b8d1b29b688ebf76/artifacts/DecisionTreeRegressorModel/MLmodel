@@ -1,0 +1,14 @@
+artifact_path: DecisionTreeRegressorModel
+flavors:
+  python_function:
+    env: conda.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    python_version: 3.6.9
+  sklearn:
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 0.22.1
+model_uuid: 4f935af2a1f74829b8cf047d3e544b01
+run_id: 4b2ab0598c794d15b8d1b29b688ebf76
+utc_time_created: '2022-06-04 07:25:01.764210'
