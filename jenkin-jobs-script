@@ -1,0 +1,18 @@
+# InstallRequirements build
+echo "(Write Your password)" | sudo -S su vicky # execute as a vicky/root user not as jenkins users due to permision issues. In your case add your user name and password
+sudo pip3 install -r requirements.txt
+# Train build
+echo "(Write Your password)" | sudo -S su vicky
+sudo aws configure set aws_access_key_id "(Add your aws key Id)"
+sudo aws configure set aws_secret_access_key "(Add your aws secret acess key)"
+sudo python3 train.py
+#Test build
+echo "(Write Your password)" | sudo -S su vicky
+sudo aws configure set aws_access_key_id "(Add your aws key Id)"
+sudo aws configure set aws_secret_access_key "(Add your aws secret acess key)"
+sudo python3 model_testing.py
+#Endpoint build
+echo "(Write Your password)" | sudo -S su vicky
+sudo aws configure set aws_access_key_id "(Add your aws key Id)"
+sudo aws configure set aws_secret_access_key "(Add your aws secret acess key)"
+sudo python3 endpoint.py

@@ -4,6 +4,8 @@ from data_preprocessing_service.inference_loader import ObjectLoader
 from utils.utils import read_config
 from fastapi import FastAPI, Request
 import uvicorn
+from psutil import process_iter
+from signal import SIGTERM # or SIGKILL
 from flask import Response
 from prediction_Validation_Insertion import pred_validation
 from predictFromModel import prediction
@@ -86,9 +88,15 @@ def reload():
     COUNT_r.inc()
     return {"Response": "Updating Model In Prod"}
 
-
+def stop_already_running_port(port):
+    for proc in process_iter():
+        for conns in proc.connections(kind='inet'):
+            if conns.laddr.port == port:
+                proc.send_signal(SIGTERM)
 if __name__ == "__main__":
+    port=8081
+    stop_already_running_port(port)
     executor = PrepareEndpoints()
     executor.inference_object_loader()
     start_http_server(5000)
-    uvicorn.run(app, host="localhost", port=8081)
+    uvicorn.run(app, host="localhost", port=port)

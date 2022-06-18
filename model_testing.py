@@ -107,8 +107,8 @@ class ModelTest:
             if r2_test > r2_prod:
                 self.log_writer.log(self.file_object,f"r2_test > r2_prod so moving to prod")
                 response = registry.move_model_test_to_prod()
-                # reload = requests.get(self.model_endpoint)
-                # print(reload.text)
+                reload = requests.get(self.model_endpoint)
+                print(reload.text)
                 print(response)
             else:
                 self.log_writer.log(self.file_object,f"r2_test < r2_prod so, Prod model is More accurate")
