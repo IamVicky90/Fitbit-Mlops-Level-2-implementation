@@ -61,12 +61,19 @@ class ModelRegistryConnection:
         os.remove(zip_file_path)
 
     def get_package_from_prod(self):
-        zip_file_path = os.path.join(from_root(), "artifacts", f'{self.package_name}.tar.gz')
-        self.bucket.download_file(f'{self.production_key}.tar.gz',zip_file_path)
-        folder = tarfile.open(zip_file_path)
-        folder.extractall(os.path.join(from_root(), "artifacts"))
-        folder.close()
-        os.remove(zip_file_path)
+        try:
+            zip_file_path = os.path.join(from_root(), "artifacts", f'{self.package_name}.tar.gz')
+            self.bucket.download_file(f'{self.production_key}.tar.gz',zip_file_path)
+            folder = tarfile.open(zip_file_path)
+            folder.extractall(os.path.join(from_root(), "artifacts"))
+            folder.close()
+            os.remove(zip_file_path)
+        except Exception as e:
+            if type(e).__name__=="ClientError":
+                self.move_model_test_to_prod()
+            else:
+                raise e
+
 
     def move_model_test_to_prod(self):
         """ Model movement from test to prod registry """
