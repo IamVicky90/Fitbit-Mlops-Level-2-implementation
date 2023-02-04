@@ -37,10 +37,9 @@ def invoke():
 
 
 @REQUEST_TIME.time()
-@app.post('/predict')
-async def predict(request: Request):
-    query = await request.json()
-    # query=[2,2,13162,0.550000011920929,6.05999994277954,0,25,13,328,728]
+@app.get('/predict')
+def predict():
+    query=[2,2,13162,0.550000011920929,6.05999994277954,0,25,13,328,728]
     if not "full_model" in models.keys():
         print('not full_model')
         ss=models['StandardScaler'].transform([query])
@@ -95,7 +94,7 @@ def stop_already_running_port(port):
                 proc.send_signal(SIGTERM)
 if __name__ == "__main__":
     port=8081
-    stop_already_running_port(port)
+    # stop_already_running_port(port)
     executor = PrepareEndpoints()
     executor.inference_object_loader()
     start_http_server(5000)

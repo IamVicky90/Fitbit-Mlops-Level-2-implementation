@@ -1,9 +1,9 @@
 aws_credebtials_environment_variables:
-  Access_key_ID: FITBIT_AWS_ACCESS_KEY_ID
-  Secret_access_key: FITBIT_THINKER_AWS_SECRET_ACCESS_KEY
+  Access_key_ID: AWS_ACCESS_KEY_ID
+  Secret_access_key: AWS_SECRET_ACCESS_KEY
 feature_store:
-  bucket_name: fitbit-datastore-registry
-  model_bucket: fitbit-prod
+  bucket_name: fitbit-data-registry
+  model_bucket: fitbit-prod-models
 trainig_configurations:
   training_batch_files_path: Training_Batch_Files
   schema_path: schema_training.json
